@@ -38,16 +38,3 @@ for(var i = 0; i < catArray.length; i++) {
 }
 
 console.log(unicos); 
-
-
-// const uniqueCategories = [];
-
-// for ( let i = 0; i < categories.length; i++){
-
-//     uniqueCategories.push(categories[i,0]);
-//     for ( let n = 0; n < categories[i].length; n++){
-//         uniqueCategories.push(categories[i,n]);
-//     }
-// }
-
-// console.log(uniqueCategories);
