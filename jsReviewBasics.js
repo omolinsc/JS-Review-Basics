@@ -160,9 +160,7 @@ for (const user of users2){
         }        
     }
 
-// const counts = {};
-// repeat.forEach(function (x) { 
-//     counts[x] = (counts[x] || 0) + 1; });
-// console.log(counts);
-
-
+const counts = {};
+repeat.forEach(function (x) { 
+    counts[x] = (counts[x] || 0) + 1; });
+console.log(counts);
