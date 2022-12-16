@@ -20,7 +20,7 @@ for (const movie of movies) {
         }
 }
 // comprobamos el resultado final
-console.log(categories);
+console.log("RESULTADO ITERACIÓN#1 : las categorías disponibles son :", categories);
 
 // ifesle => condicion ? respuesta correcta : respuesta incorrecta
 // if => condición && respuesta correcta
@@ -61,3 +61,27 @@ const users = [
     },
 ]
 
+//forof + forin
+//media de volumenes - están dentro de favoritesSounds que a su vez están dentro de cada usuario
+
+
+// creamos variables para saber las vueltas del bucle y saber la suma de todos los volúmenes
+let contador = 0;
+let sumaVolumen = 0;
+
+// iniciamos el bucle para leer los usuarios de 1 en 1
+for ( const user of users ) {
+
+    // creamos un FORIN para acceder a la clave de cada sonido y ponerla en SOUND
+    for ( const sound in user.favoritesSounds) {
+
+        // accedemos a los valores de VOLUMEN de favoritesSounds y lo guardamos en número utilizando "user.favoritesSounds[sound].volume"
+        let numero = user.favoritesSounds[sound].volume;
+        // incrementamos el contador en 1 cada vuelta para saber la cantidad de números que tenemos
+        contador++;
+        // sumamos el numero a sumaVolumen para guardarlo fuera del bucle
+        sumaVolumen += numero;
+    }
+}
+// mostramos por pantalla la operación de división para que nos enseñe la media
+console.log("RESULTADO ITERACIÓN#2 : La media de todos los volúmenes es:",sumaVolumen/contador);
