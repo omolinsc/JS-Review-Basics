@@ -164,3 +164,28 @@ const counts = {};
 repeat.forEach(function (x) { 
     counts[x] = (counts[x] || 0) + 1; });
 console.log(counts);
+
+
+
+
+// **Iteración #4: Métodos findArrayIndex**
+
+// Crea una función llamada `findArrayIndex` que reciba como parametros un array de textos y un texto y devuelve la posición del array cuando el valor del array sea igual al valor del texto que enviaste como parametro. Haz varios ejemplos y compruebalos.
+
+// Sugerencia de función:
+
+console.log("");
+console.log("ITERATION#4 ----------------------");
+
+const arrayPalabras = ['Caracol', 'Mosquito', 'Salamandra', 'Ajolote'];
+
+function findArrayIndex(array, text) {
+    for (let i = 0; i < array.length; i++){
+        if (text === array[i]){
+            return text + " está en la posición " + (i+1);
+        }
+    }
+    return text + " no se encuentra en el array.";
+}
+
+console.log(findArrayIndex(arrayPalabras,"Mosquito"));
